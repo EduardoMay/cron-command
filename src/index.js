@@ -1,6 +1,6 @@
 import app from "./app";
 import config from "./config";
 
-app.listen(app.get(`port`));
+app.listen(+config.port);
 
-console.log("server on port", config.port);
+console.log("server on port", +config.port);
