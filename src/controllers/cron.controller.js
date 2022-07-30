@@ -11,10 +11,11 @@ const autoRunApi = new CronCommandService();
 export const startCronCommand = async (req, res) => {
   const command = req.body.command + "";
   const timeCron = req.body.time + "";
+  const title = req.body.title + "";
 
-  autoRunApi.startCommand(command, timeCron);
+  autoRunApi.startCommand(command, timeCron, title);
 
-  res.json({ message: "Run cron", command, timeCron });
+  res.json({ message: "Run cron", command, timeCron, title });
 };
 
 /**

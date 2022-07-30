@@ -24,8 +24,11 @@ export class CronCommandService {
   /**
    * @param {string} command
    * @param {string} timeCron
+   * @param {string} title
    */
-  startCommand(command, timeCron) {
+  startCommand(command, timeCron, title) {
+    console.log(title);
+
     this.command = command;
     this.timeCron = timeCron;
 
