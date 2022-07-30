@@ -6,7 +6,8 @@ import CronRoutes from "./routes/cron";
 const app = express();
 
 // setting
-app.set("port", process.env.PORT || 3000);
+const port = process.argv.slice(2)[0];
+app.set("port", +port);
 
 // middleware
 app.use(
